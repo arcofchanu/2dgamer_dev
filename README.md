@@ -1,6 +1,6 @@
 # 2dgamer_dev
 
-An intentionally **empty dummy package** used for testing PyPI CI/CD deployment. It does nothing functionally — no functions, no classes, no logic. It only exposes a version string.
+A lightweight helper tool for game asset preprocessing – designed for Godot 4 and similar 2D game engines.
 
 ## Installation
 
@@ -8,22 +8,28 @@ An intentionally **empty dummy package** used for testing PyPI CI/CD deployment.
 pip install 2dgamer_dev
 ```
 
-## Verify the install
+### Quick Usage
+
+After installation, the following commands become available:
+
+Slice a sprite sheet into individual frames
+```bash
+2dgamer slice assets/spritesheet.png --output frames/
+Pack multiple images into a single tilemap atlas
+```
 
 ```bash
-python -c "import gamer_dev; print(gamer_dev.__version__)"
+2dgamer pack assets/tiles/ --output tilemap.tres
+Convert audio files to Godot-compatible OGG format
 ```
 
-Expected output:
-
-```
-0.1.0
+```bash
+2dgamer convert audio/*.wav --format ogg
 ```
 
-## Note: PyPI name vs. import name
+Requirements
+-Python 3.8 or higher
+-Pillow (installed automatically)
 
-The **PyPI project name** is `2dgamer_dev`, but the **import name** is `gamer_dev`. PyPI package names may start with a digit, but Python module names cannot — so you install `2dgamer_dev` and import `gamer_dev`.
-
-## License
-
+License
 MIT
