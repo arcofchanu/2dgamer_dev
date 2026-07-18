@@ -4,8 +4,8 @@ build-backend = "hatchling.build"
 
 [project]
 name = "2dgamer_dev"
-version = "0.1.0"
-description = "Empty dummy package, does nothing, for testing PyPI deployment"
+version = "0.2.0"
+description = "A lightweight helper tool for game asset preprocessing – designed for Godot 4 and similar 2D game engines."
 readme = "README.md"
 license = { text = "MIT" }
 authors = [
