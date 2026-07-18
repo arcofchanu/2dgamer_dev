@@ -1,0 +1,21 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "2dgamer_dev"
+version = "0.1.0"
+description = "Empty dummy package, does nothing, for testing PyPI deployment"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [
+    { name = "Jerry" },
+]
+requires-python = ">=3.8"
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/gamer_dev"]
